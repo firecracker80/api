@@ -81,9 +81,14 @@ class App extends React.Component {
                 <Card.Text>
                   <b>Longitude:</b> {this.state.cityFind.lon}
                 </Card.Text>
-                <Card.Text>
-                  <b>Forecast:</b> {this.state.cityInfo.data}
-                </Card.Text>
+                {/* <Card.Text>
+                  <b>Forecast:</b> {this.state.cityInfo.data.map(day => {
+                      return (<Weather
+                      day = {day}
+                      />)
+                  })}
+                
+                </Card.Text> */}
               </Card.Body>
             </Card>: <p>Please enter a city.</p>
           }
