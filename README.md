@@ -31,6 +31,9 @@ Finish time: 11pm
 
 Actual time needed to complete: 5 hrs.
 
+WRRC:
+![Lab 6 WRRC](/public/images/wrrc%20lab-6.jpg)
+
 Name of feature: Custom Servers with Node and Express
 
 Estimate of time needed to complete: 5 hrs
@@ -42,3 +45,4 @@ Finish time: 11pm
 Actual time needed to complete: 5 hrs.
 
 WRRC:
+![Lab 6 WRRC](/public/images/wrrc%20lab-7.jpg)
