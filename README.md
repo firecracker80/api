@@ -4,7 +4,7 @@
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
-The purpose of the application is to render specific information when the city name is entered. This will compile basic city information, such as, city/state, location in the form of latitude and longitude, it will display a map based on the coordinates rendered, and a 3 day forecast.
+The purpose of the application is to render specific information when the city name is entered. This will compile basic city information, such as, city/state, location in the form of latitude and longitude, it will display a map based on the coordinates rendered, and a 5 day forecast.
 
 ## Getting Started
 <!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
@@ -12,7 +12,7 @@ The purpose of the application is to render specific information when the city n
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-
+This application was built using REACT, React Bootstrap
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
@@ -42,3 +42,13 @@ Finish time: 11pm
 Actual time needed to complete: 5 hrs.
 
 WRRC:
+
+Name of feature: API
+
+Estimate of time needed to complete: 5 hrs
+
+Start time: 5pm
+
+Finish time: 11pm
+
+Actual time needed to complete: 5 hrs.
