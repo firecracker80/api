@@ -35,12 +35,13 @@ class App extends React.Component {
       let url = (`https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&q=${this.state.city}&format=json`);
       let cityFind = await axios.get(url);
       let cityMap = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${cityFind.data[0].lat},${cityFind.data[0].lon}&zoom=12`;
-      let cityInfoUrl = await axios.get(`${process.env.REACT_APP_SERVER}/city?cityWeather=${this.state.city}`);
+      // let cityInfoUrl = await axios.get(`http://api.weatherbit.io/v2.0/forecast/daily?key=d7c674b52ef6496faff8efb5d2c236d7&lang=en&units=I&days=5&lat=47.60621&lon=-122.33207`);
+      let cityInfoUrl = await axios.get(`${process.env.REACT_APP_SERVER}/city?searchQuery=${this.state.city}`, {params: {lat: cityFind.data[0].lat, lon: cityFind.data[0].lon}});
       console.log(cityInfoUrl);
       this.setState({
         cityFind: cityFind.data[0],
         cityMap: cityMap,
-        cityInfo:cityInfoUrl
+        cityInfo: cityInfoUrl
       })
     }
 
@@ -68,9 +69,9 @@ class App extends React.Component {
           </Form.Group>
         </Form>
         {this.state.error}<Alert variant="info">{this.state.errorMessage}</Alert>
-        
-          {
-            this.state.cityFind ?
+
+        {
+          this.state.cityFind ?
             <Card border="info" style={{ width: '18rem' }} id='Card' onSubmit={this.handleSubmit}>
               <Card.Body>
                 <Card.Title><b>City:</b> {this.state.cityFind.display_name}</Card.Title>
@@ -81,21 +82,18 @@ class App extends React.Component {
                 <Card.Text>
                   <b>Longitude:</b> {this.state.cityFind.lon}
                 </Card.Text>
-                {/* <Card.Text>
-                  <b>Forecast:</b> {this.state.cityInfo.data.map(day => {
-                      return (<Weather
-                      day = {day}
-                      />)
-                  })}
-                
-                </Card.Text> */}
+                <Card.Text>
+                  <b>Forecast:</b>
+                </Card.Text>
+                {this.state.cityInfo.data.map(day => {return <ul><li>Date: {day.date}</li><li>Description: {day.description}</li></ul>})}
+               
               </Card.Body>
-            </Card>: <p>Please enter a city.</p>
-          }
-        </>
-        )
+            </Card> : <p>Please enter a city.</p>
+        }
+      </>
+    )
   }
 };
 
 
-        export default App;
+export default App;
