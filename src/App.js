@@ -36,7 +36,7 @@ class App extends React.Component {
       let cityFind = await axios.get(url);
       let cityMap = `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_LOCATIONIQ_API_KEY}&center=${cityFind.data[0].lat},${cityFind.data[0].lon}&zoom=12`;
       // let cityInfoUrl = await axios.get(`http://api.weatherbit.io/v2.0/forecast/daily?key=d7c674b52ef6496faff8efb5d2c236d7&lang=en&units=I&days=5&lat=47.60621&lon=-122.33207`);
-      let cityInfoUrl = await axios.get(`${process.env.REACT_APP_SERVER}/city?searchQuery=${this.state.city}`, {params: {lat: cityFind.data[0].lat, lon: cityFind.data[0].lon}});
+      let cityInfoUrl = await axios.get(`${process.env.REACT_APP_SERVER}/weather?searchQuery=${this.state.city}`, {params: {lat: cityFind.data[0].lat, lon: cityFind.data[0].lon}});
       console.log(cityInfoUrl);
       this.setState({
         cityFind: cityFind.data[0],
@@ -85,7 +85,7 @@ class App extends React.Component {
                 <Card.Text>
                   <b>Forecast:</b>
                 </Card.Text>
-                {this.state.cityInfo.data.map(day => {return <ul><li>Date: {day.date}</li><li>Description: {day.description}</li></ul>})}
+                {this.state.cityInfo.data.map((day, idx) => {return <ul key={idx}><li><b>Date:</b> {day.date}</li><li><b>Description:</b> {day.description}</li></ul>})}
                
               </Card.Body>
             </Card> : <p>Please enter a city.</p>
