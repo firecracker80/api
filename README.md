@@ -46,4 +46,19 @@ Actual time needed to complete: 5 hrs.
 
 WRRC:
 
-![Lab 6 WRRC](/public/images/wrrc%20lab-7.jpg)
+![Lab 7 WRRC](/public/images/wrrc%20lab-7.jpg)
+
+
+Name of feature: API
+
+Estimate of time needed to complete: 5 hrs
+
+Start time: 5pm
+
+Finish time: 11pm
+
+Actual time needed to complete: 6 hrs.
+
+WRRC:
+
+![Lab 8 WRRC](/public/images/lab8%20wrrc.png)
