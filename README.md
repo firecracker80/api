@@ -12,7 +12,7 @@ The purpose of the application is to render specific information when the city n
 
 ## Architecture
 <!-- Provide a detailed description of the application design. What technologies (languages, libraries, etc) you're using, and any other relevant design information. -->
-This application was built using REACT, React Bootstrap
+This application was built using REACT, React Bootstrap,axios, CORS, and APIs.
 ## Change Log
 <!-- Use this area to document the iterative changes made to your application as each feature is successfully implemented. Use time stamps. Here's an example:
 
