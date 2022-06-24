@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Alert from 'react-bootstrap/Alert';
 import Movies from './Movies';
+import Weather from './Weather'
 import axios from 'axios';
 
 class App extends React.Component {
@@ -89,7 +90,9 @@ class App extends React.Component {
                 <Card.Text>
                   <b>Forecast:</b>
                 </Card.Text>
-                {this.state.cityInfo.data.map((day, idx) => {return <ul key={idx}><li><b>Date:</b> {day.date}</li><li><b>Description:</b> {day.description}</li></ul>})}
+                <Weather
+                cityFind = {this.state.cityInfo.data}
+                /> 
                 <Card.Text>
                   <b>Associated Movies:</b>
                 </Card.Text>
