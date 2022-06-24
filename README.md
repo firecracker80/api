@@ -61,4 +61,5 @@ Actual time needed to complete: 6 hrs.
 
 WRRC:
 
-![Lab 8 WRRC](/public/images/lab8%20wrrc.png)
+![Lab 8 WRRC](/public/images/lab8%20wrrc.png)<br/>
+![Lab 9 WRRC](/public/images/lab9.jpg)
