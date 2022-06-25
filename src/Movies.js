@@ -7,18 +7,16 @@ class Movies extends React.Component {
 
     return (
       this.props.cityMovies.map((clip, idx) => {
+        return(
         <OneMovie
           clip={clip}
           key={idx} />
-        })
+        )})
         
     )      
   }
 
 };
-
-
-
 
 class OneMovie extends React.Component {
 
